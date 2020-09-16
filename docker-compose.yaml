@@ -2,6 +2,8 @@ wordpress:
   image: wordpress
   links:
     - wordpress_db:mysql
+  volumes:
+    - ~/wordpress/wp_html:/var/www/html
   ports:
     - 8080:80
 wordpress_db:
